@@ -1,5 +1,5 @@
 .DS_Store
 test-ledger/
 test-ledger/**
-dist/
-dist/**
+solana_test_lib/src/dist/
+solana_test_lib/src/dist/**
