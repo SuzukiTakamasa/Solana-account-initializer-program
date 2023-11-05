@@ -2,9 +2,9 @@ version: '3.8'
 
 services:
   solana-program:
+    tty: true
     build:
       context: .
       dockerfile: Dockerfile
     volumes:
       - ./solana_test_lib/src/dist/program:/usr/src/app/solana_test_lib/src/dist/program
-    command: sh -c "cargo build-bpf --manifest-path=./solana_test_lib/Cargo.toml --bpf-out-dir=./solana_test_lib/src/dist/program"

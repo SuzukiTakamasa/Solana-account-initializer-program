@@ -16,7 +16,8 @@ RUN adduser \
 WORKDIR /user/src/app
 COPY . .
 
+RUN cargo clean
 RUN sh -c "$(curl -sSfL https://release.solana.com/stable/install)"
 ENV PATH="/root/.local/share/solana/install/active_release/bin:$PATH"
 
-#CMD sh -c "cargo build-bpf --manifest-path=./solana_test_lib/Cargo.toml --bpf-out-dir=./solana_test_lib/src/dist/program"
+CMD sh -c "cargo build-bpf --manifest-path=./solana_test_lib/Cargo.toml --bpf-out-dir=./solana_test_lib/src/dist/program -v"
