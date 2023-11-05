@@ -1,5 +1,11 @@
 .DS_Store
+
 test-ledger/
 test-ledger/**
+
+solana_test_lib/Cargo.lock
+
 solana_test_lib/src/dist/
 solana_test_lib/src/dist/**
+solana_test_lib/target/
+solana_test_lib/target/**
